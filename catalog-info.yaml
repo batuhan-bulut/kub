@@ -3,7 +3,7 @@ kind: Component
 metadata:
   annotations:
     backstage.io/kubernetes-id: minikube
-  name: my-kubernetes-component
+  name: minikube
 spec:
   lifecycle: production
   owner: my-team
