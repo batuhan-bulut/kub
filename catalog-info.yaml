@@ -8,29 +8,3 @@ spec:
   lifecycle: production
   owner: batuhan-bulut
   type: service
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: minikube
-  labels:
-    backstage.io/kubernetes-id: minikube
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: minikube
-  template:
-    metadata:
-      labels:
-        app: minikube
-        backstage.io/kubernetes-id: minikube
-    spec:
-      containers:
-      - name: ubuntu
-        image: ubuntu
-        command: 
-        - /bin/sh
-        args:
-        - -c
-        - "tail -f /dev/null"
