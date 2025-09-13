@@ -2,29 +2,29 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   annotations:
-    backstage.io/kubernetes-id: my-kubernetes-component
-  name: my-kubernetes-component
+    backstage.io/kubernetes-id: minikube
+  name: minikube
 spec:
   lifecycle: production
-  owner: my-team
+  owner: batuhan-bulut
   type: service
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-kubernetes-component
+  name: minikube
   labels:
-    backstage.io/kubernetes-id: my-kubernetes-component
+    backstage.io/kubernetes-id: minikube
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-kubernetes-component
+      app: minikube
   template:
     metadata:
       labels:
-        app: my-kubernetes-component
-        backstage.io/kubernetes-id: my-kubernetes-component
+        app: minikube
+        backstage.io/kubernetes-id: minikube
     spec:
       containers:
       - name: ubuntu
