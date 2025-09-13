@@ -2,8 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   annotations:
-    backstage.io/kubernetes-id: minikube
-  name: minikube
+    backstage.io/kubernetes-id: my-kubernetes-content
+  name: my-kubernetes-content
 spec:
   lifecycle: production
   owner: batuhan-bulut
